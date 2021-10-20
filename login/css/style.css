@@ -1,0 +1,16 @@
+#apple {
+    font-size: 50px;
+    margin-left: 50%;
+    color: red;
+}
+
+#person {
+    font-size: 60px;
+    margin-left: 48%;
+    color: red;
+}
+
+.input-group {
+    margin-top: 1rem;
+    width: 25%;
+}
