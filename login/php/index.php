@@ -21,22 +21,38 @@
 
     <!-- LO MIO -->
     <!-- TITULO -->
-    <h1 class = "text-center mb-2 mt-3">Iniciar Sesión</h1>
-    <i id = "person" class="bi bi-person-circle"></i>
+    <div class="container-sm">
+        <h1 class = "text-center mb-2 mt-5 text-danger">Iniciar Sesión</h1>
+        <i id = "person" class="bi bi-person-circle text-danger"></i>
+        
+        <!-- INPUTS -->
+        <div class="input-group flex-nowrap mx-auto">
+            <span class="input-group-text text-danger" id="addon-wrapping">@</span>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap mx-auto ">
+            <span class="input-group-text text-danger" id="addon-wrapping" style="width: 2.57rem">**</span>
+            <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
 
-    <!-- INPUTS -->
-    <div class="input-group flex-nowrap mx-auto">
-        <span class="input-group-text" id="addon-wrapping">@</span>
-        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
-    </div>
-    <div class="input-group flex-nowrap mx-auto">
-        <span class="input-group-text" id="addon-wrapping">*</span>
-        <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping">
+        <!-- BUTTON  -->
+        <div class="d-grid col-2 mx-auto mt-5">
+            <button type="button" class="btn btn-outline-danger">Iniciar Sesión</button>
+        </div>
+        
     </div>
 
-    <!-- BUTTON  -->
-    <div class="d-grid col-2 mx-auto mt-5">
-        <button type="button" class="btn btn-outline-danger">Iniciar Sesión</button>
-    </div>
-</body>
+    <!-- ACÁ ESTOY INTENTANDO METERLO EN UNA CARD -->
+    <!-- <div class="card text-dark bg-light mb-3 mx-auto" style="max-width: 25rem;">
+        <div class="card-header">
+            <h1 class = "text-center mb-2 mt-3 text-danger">Iniciar Sesión</h1>
+            <i id = "icon" class="bi bi-person-circle text-danger"></i>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Light card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+    </div> -->
+
+    </body>
 </html>
