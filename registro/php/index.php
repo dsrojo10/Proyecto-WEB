@@ -20,40 +20,33 @@
     </div>
 
 
-    <div class="container-sm">
+    <form method = "POST" action="">
+            <div class="container-sm">
         <!-- INPUTS -->
         <div class="input-group flex-nowrap mx-auto">
-            <input type="text" class="form-control" placeholder="Nombre de usuario" aria-label="username" aria-describedby="addon-wrapping">
+            <input type="text" required = "" class="form-control" placeholder="Nombre de usuario" aria-label="username" aria-describedby="addon-wrapping">
         </div>
         <div class="input-group flex-nowrap mx-auto ">
-            <input type="text" class="form-control" placeholder="Nombre" aria-label="name" aria-describedby="addon-wrapping">
+            <input type="text" required = "" class="form-control" placeholder="Nombre" aria-label="name" aria-describedby="addon-wrapping">
         </div>
         <div class="input-group flex-nowrap mx-auto">
-            <input type="text" class="form-control" placeholder="Apellido" aria-label="lastname" aria-describedby="addon-wrapping">
+            <input type="text" required = "" class="form-control" placeholder="Apellido" aria-label="lastname" aria-describedby="addon-wrapping">
         </div>
         <div class="input-group flex-nowrap mx-auto ">
-            <input type="text" class="form-control" placeholder="Cédula" aria-label="document" aria-describedby="addon-wrapping">
+            <input type="text" required = "" class="form-control" placeholder="Cédula" aria-label="document" aria-describedby="addon-wrapping">
         </div>
         <div class="input-group flex-nowrap mx-auto">
-            <input type="text" class="form-control" placeholder="Teléfono" aria-label="phone" aria-describedby="addon-wrapping">
+            <input type="text" required = "" class="form-control" placeholder="Teléfono" aria-label="phone" aria-describedby="addon-wrapping">
         </div>
         <div class="input-group flex-nowrap mx-auto ">
-            <input type="text" class="form-control" placeholder="Celular" aria-label="cellphone" aria-describedby="addon-wrapping">
+            <input type="text" required = "" class="form-control" placeholder="Celular" aria-label="cellphone" aria-describedby="addon-wrapping">
         </div>
         <div class="input-group flex-nowrap mx-auto">
-            <input type="text" class="form-control" placeholder="Dirección" aria-label="addres" aria-describedby="addon-wrapping">
+            <input type="text" required = "" class="form-control" placeholder="Dirección" aria-label="addres" aria-describedby="addon-wrapping">
         </div>
         <div class="input-group flex-nowrap mx-auto ">
-            <input type="password" class="form-control" placeholder="Clave" aria-label="password" aria-describedby="addon-wrapping">
+            <input type="password" required = "" class="form-control" placeholder="Clave" aria-label="password" aria-describedby="addon-wrapping">
         </div>
-        <!-- <div class="input-group flex-nowrap mx-auto " style="height: 3.5rem;">
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example"  aria-describedby="addon-wrapping">
-                <option selected>Seleccione un rol:</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-        </div> -->
         <div class="input-group flex-nowrap mx-auto">
             <div class="form-floating mx-auto mb-3 col-12" style="height: 3rem;">
                 <select class="form-select" id="floatingSelect" name="rol">
@@ -68,9 +61,11 @@
 
         <!-- BUTTON  -->
         <div class="d-grid col-2 mx-auto mt-2">
-            <button type="button" class="btn btn-outline-danger">Registrarse</button>
+            <button type="submit" class="btn btn-outline-danger">Registrarse</button>
         </div>
     </div>
+    </form>
+
 
     <!-- ACÁ ESTOY INTENTANDO METERLO EN UNA CARD -->
     <!-- <div class="card text-dark bg-light mb-3 mx-auto" style="max-width: 25rem;">

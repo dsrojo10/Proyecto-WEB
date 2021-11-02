@@ -25,21 +25,22 @@
         <h1 class = "text-center mb-2 mt-5 text-danger">Iniciar Sesión</h1>
         <i id = "person" class="bi bi-person-circle text-danger"></i>
         
+        <form method = "POST" action="">
         <!-- INPUTS -->
         <div class="input-group flex-nowrap mx-auto">
             <span class="input-group-text text-danger" id="addon-wrapping">@</span>
-            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+            <input type="text" required class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
         </div>
         <div class="input-group flex-nowrap mx-auto ">
             <span class="input-group-text text-danger" id="addon-wrapping" style="width: 2.57rem">**</span>
-            <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping">
+            <input type="password" required class="form-control" placeholder="Password" aria-label="Username" aria-describedby="addon-wrapping">
         </div>
 
         <!-- BUTTON  -->
         <div class="d-grid col-2 mx-auto mt-5">
-            <button type="button" class="btn btn-outline-danger">Iniciar Sesión</button>
+            <button type="submit" class="btn btn-outline-danger">Iniciar Sesión</button>
         </div>
-        
+        </form>        
     </div>
 
     <!-- ACÁ ESTOY INTENTANDO METERLO EN UNA CARD -->
