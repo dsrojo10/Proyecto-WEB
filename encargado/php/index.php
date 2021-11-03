@@ -15,12 +15,29 @@
         .modal {
             display: contents !important;
         }
+
         .modal-dialog {
             max-width: none !important;
             margin: 2rem auto !important;
         }
+
         p {
-            margin-top: -1rem !important;
+            margin-top: -0.7rem !important;
+            margin-left: 3px !important;
+        }
+
+        .mostrar {
+            z-index: 1 !important;
+        }
+
+        input:valid,
+        textarea:valid {
+            border: 1.5px green solid !important;
+        }
+
+        input:invalid,
+        textarea:invalid {
+            border: 1.5px red solid !important;
         }
     </style>
 </head>
@@ -36,7 +53,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="../../menu/php/index.php">Inicio</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,7 +88,7 @@
 
     <div class="container">
         <!-- MODAL -->
-        <div class="modal" tabindex="-1">
+        <div class="modal">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -83,29 +100,29 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group flex-nowrap mx-auto ">
-                                        <input type="text" required="" class="form-control mb-3" placeholder="Nombres" aria-label="name" aria-describedby="addon-wrapping">
+                                        <input type="text" required="" class="form-control mb-3" placeholder="Nombres" aria-label="name" aria-describedby="addon-wrapping" minlength="3" maxlength="25">
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="input-group flex-nowrap mx-auto">
-                                        <input type="text" required="" class="form-control mb-3" placeholder="Primer Apellido" aria-label="lastname1" aria-describedby="addon-wrapping">
+                                        <input type="text" required="" class="form-control mb-3" placeholder="Primer Apellido" aria-label="lastname1" aria-describedby="addon-wrapping" minlength="3" maxlength="20">
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="input-group flex-nowrap mx-auto">
-                                        <input type="text" required="" class="form-control mb-3" placeholder="Segundo Apellido" aria-label="lastname2" aria-describedby="addon-wrapping">
+                                        <input type="text" required="" class="form-control mb-3" placeholder="Segundo Apellido" aria-label="lastname2" aria-describedby="addon-wrapping" minlength="3" maxlength="20">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
                                     <div class="input-group flex-nowrap mx-auto ">
-                                        <input type="text" required="" class="form-control mb-3" placeholder="Cédula" aria-label="document" aria-describedby="addon-wrapping">
+                                        <input type="text" required="" class="form-control mb-3" placeholder="Cédula" aria-label="document" aria-describedby="addon-wrapping" minlength="3" maxlength="15">
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="input-group flex-nowrap mx-auto">
-                                        <select class="form-select" aria-label="Default select example">
+                                        <select class="form-select " id="validationCustom05" required aria-label="Default select example">
                                             <option selected>Nivel de estudios:</option>
                                             <option value="1">Bachiller</option>
                                             <option value="2">Técnico/Tecnólogo</option>
@@ -118,7 +135,7 @@
                                         <input type="file" class="form-control" id="inputGroupFile02">
                                         <label class="input-group-text" for="inputGroupFile02">Upload</label>
                                     </div>
-                                    <p>Hoja de vida</p>
+                                    <p class="fw-bolder">Hoja de vida</p>
                                 </div>
                             </div>
                             <div class="row">
@@ -127,70 +144,111 @@
                                         <input type="file" class="form-control" id="inputGroupFile02">
                                         <label class="input-group-text" for="inputGroupFile02">Upload</label>
                                     </div>
-                                    <p>Diploma</p>
+                                    <p class="fw-bolder">Diploma</p>
                                 </div>
                                 <div class="col">
                                     <div class="input-group mb-3">
                                         <input type="file" class="form-control" id="inputGroupFile02">
                                         <label class="input-group-text" for="inputGroupFile02">Upload</label>
                                     </div>
-                                    <p>Curso 50h</p>
+                                    <p class="fw-bolder">Curso 50h</p>
                                 </div>
                                 <div class="col">
                                     <div class="input-group mb-3">
                                         <input type="file" class="form-control" id="inputGroupFile02">
                                         <label class="input-group-text" for="inputGroupFile02">Upload</label>
                                     </div>
-                                    <p>Seccional de salud</p>
+                                    <p class="fw-bolder">Seccional de salud</p>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <div class="modal" tabindex="-1">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                </div>
-                                <div class="modal-body">
-                                    <div class="container mt-5">
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="input-group mb-3">
-                                                    <input type="file" class="form-control" id="inputGroupFile02">
-                                                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                                                </div>
-                                                <p>Política (Documento)</p>
-                                            </div>
-                                            <div class="col">
-                                                <div class="input-group mb-3">
-                                                    <input type="file" class="form-control" id="inputGroupFile02">
-                                                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                                                </div>
-                                                <p>Riesgos psicosociales (Documento)</p>
-                                            </div>
-                                            <div class="col">
-                                                <div class="input-group mb-3">
-                                                    <input type="file" class="form-control" id="inputGroupFile02">
-                                                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                                                </div>
-                                                <p>Plan de emergencia (Documento)</p>
-                                            </div>
-                                        </div>
+        <div class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="input-group mb-3">
+                                        <input type="file" class="form-control" id="inputGroupFile02">
+                                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
                                     </div>
+                                    <p class="fw-bolder">Política (Documento)</p>
                                 </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                    <button type="button" class="btn btn-primary">Enviar</button>
+                                <div class="col">
+                                    <div class="input-group mb-3">
+                                        <input type="file" class="form-control" id="inputGroupFile02">
+                                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                    </div>
+                                    <p class="fw-bolder">Riesgos psicosociales (Documento)</p>
+                                </div>
+                                <div class="col">
+                                    <div class="input-group mb-3">
+                                        <input type="file" class="form-control" id="inputGroupFile02">
+                                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                                    </div>
+                                    <p class="fw-bolder">Plan de emergencia (Documento)</p>
                                 </div>
                             </div>
                         </div>
-
-
+                    </div>
                 </div>
+            </div>
+        </div> 
+
+        <!-- MIO -->
+        <!-- <div class="modal mostrar">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                </div>
+                <div class="modal-body">
+                    <div class="container mt-5">
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-group mb-3">
+                                    <input type="file" class="form-control" id="inputGroupFile04">
+                                    <label class="input-group-text" for="inputGroupFile04">Upload</label>
+                                </div>
+                                <p class="fw-bolder">Política (Documento)</p>
+                            </div>
+                            <div class="col">
+                                <div class="input-group mb-3">
+                                    <input type="file" class="form-control" id="inputGroupFile05">
+                                    <label class="input-group-text" for="inputGroupFile05">Upload</label>
+                                </div>
+                                <p class="fw-bolder">Riesgos psicosociales (Documento)</p>
+                            </div>
+                            <div class="col">
+                                <div class="input-group mb-3">
+                                    <input type="file" class="form-control" id="inputGroupFile06">
+                                    <label class="input-group-text" for="inputGroupFile06">Upload</label>
+                                </div>
+                                <p class="fw-bolder">Plan de emergencia (Documento)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Enviar</button> -->
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
