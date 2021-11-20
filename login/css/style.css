@@ -1,15 +1,34 @@
-#apple {
-    font-size: 50px;
-    margin-left: 50%;
-    color: red;
-}
-
-#person {
-    font-size: 60px;
-    margin-left: 48%;
-}
-
 .input-group {
     margin-top: 1rem;
     width: 25%;
+}
+
+.grupo__login {
+    margin-top: 15%;
+}
+
+.grupo__boton {
+    margin-top: 2000px;
+}
+
+.logo {
+    margin-top: 150px;
+    margin-right: 50px;
+}
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+	.logo {
+        /* display: none; */
+        align-items: center;
+        margin-top: -20px;
+    }
+
+    .grupo__boton {
+        min-width: 200px;
+    }
+
+    .input-group {
+        min-width: 200px;
+    }
 }

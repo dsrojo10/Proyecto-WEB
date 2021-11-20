@@ -26,3 +26,19 @@
 .bajar {
     margin-top: 10px;
 }
+
+.grupo__botones {
+	margin-top: 10px;
+    margin-left: 20%;
+}
+
+.es_activo {
+    margin-left: 25%;
+    margin-top: 10px;
+    /* falta redondear */
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}

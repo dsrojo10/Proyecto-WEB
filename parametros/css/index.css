@@ -3,6 +3,10 @@
     margin-left: 46%;
 }
 
+.titulo {
+	margin-right: 50px !important;
+}
+
 .input-group {
     margin-top: 1rem;
     width: 25%;
@@ -23,7 +27,7 @@ body {
 }
 
 main {
-	max-width: 800px;
+	max-width: 1000px;
 	width: 90%;
 	margin: auto;
 	padding: 40px;
@@ -31,7 +35,7 @@ main {
 
 .formulario {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	gap: 20px;
 }
 
@@ -84,7 +88,7 @@ main {
 
 .formulario__mensaje,
 .formulario__grupo-btn-enviar {
-	grid-column: span 2;
+	grid-column: span 3;
 }
 
 .formulario__mensaje {
@@ -138,6 +142,10 @@ main {
 	display: block;
 }
 
+/* .grupo__1 {
+	grid-column: span 2;
+} */
+
 /* ----- -----  Estilos para Validacion ----- ----- */
 .formulario__grupo-correcto .formulario__validacion-estado {
 	color: #1ed12d;
@@ -172,4 +180,12 @@ main {
 	.formulario__btn {
 		width: 100%;
 	}
+}
+
+
+
+/* -----------------ESTILOS BUTTON-GROUP -------------------------- */
+.grupo__botones {
+	margin-top: -50px;
+    margin-left: 35px;
 }
