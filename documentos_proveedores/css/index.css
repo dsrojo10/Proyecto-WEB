@@ -60,17 +60,5 @@ button {
 }
 
 .grupo__carpetas {
-    /* margin-left: 10%; */
-}
-
-.boton {
-    margin-top: -50px !important;
-
-}
-
-.m1 {
-    margin-top: -170px !important;
-    max-width: 50px !important;
-    
-    
+    margin-left: 7%;
 }

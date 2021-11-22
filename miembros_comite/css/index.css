@@ -1,0 +1,44 @@
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+}
+
+/* rotate caret on hover */
+.dropdown-menu > li > a:hover::after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+}
+
+#cerrar {
+    margin-left: 1000px;
+}
+
+/* revisar */
+.bajar {
+    margin-top: 10px;
+}
+
+.grupo__botones {
+	margin-top: 10px;
+    margin-left: 20%;
+}
+
+.es_miembro {
+    margin-left: 25%;
+    margin-top: 10px;
+    /* falta redondear */
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
