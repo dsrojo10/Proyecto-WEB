@@ -1,10 +1,83 @@
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+}
+
+/* rotate caret on hover */
+.dropdown-menu > li > a:hover::after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+}
+
+#cerrar {
+    margin-left: 1000px;
+}
+
+/* revisar */
+.bajar {
+    margin-top: 10px;
+}
+
+.grupo__botones {
+	margin-top: 10px;
+    margin-left: 20%;
+}
+
+.es_activo {
+    margin-left: 25%;
+    margin-top: 10px;
+    /* falta redondear */
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* --------------- ESTILOS FORM ------------------- */
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+}
+
+/* rotate caret on hover */
+.dropdown-menu > li > a:hover::after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+}
+
+#cerrar {
+    margin-left: 1000px;
+}
+
+/* revisar */
+.bajar {
+    margin-top: 10px;
+}
+
+/*  */
+
 #person {
     font-size: 60px;
     margin-left: 46%;
-}
-
-.titulo {
-	margin-right: 50px !important;
 }
 
 .input-group {
@@ -27,7 +100,7 @@ body {
 }
 
 main {
-	max-width: 1000px;
+	max-width: 800px;
 	width: 90%;
 	margin: auto;
 	padding: 40px;
@@ -142,7 +215,6 @@ main {
 	display: block;
 }
 
-
 /* ----- -----  Estilos para Validacion ----- ----- */
 .formulario__grupo-correcto .formulario__validacion-estado {
 	color: #1ed12d;
@@ -162,6 +234,11 @@ main {
 	border: 3px solid #bb2929;
 }
 
+.observacion,
+.descripcion {
+    grid-column: span 2;
+}
+
 
 /* ----- -----  Mediaqueries ----- ----- */
 @media screen and (max-width: 800px) {
@@ -177,12 +254,4 @@ main {
 	.formulario__btn {
 		width: 100%;
 	}
-}
-
-
-
-/* -----------------ESTILOS BUTTON-GROUP -------------------------- */
-.grupo__botones {
-	margin-top: -50px;
-    margin-left: 35px;
 }

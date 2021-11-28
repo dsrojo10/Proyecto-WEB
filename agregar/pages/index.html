@@ -23,37 +23,18 @@
 
 <body>
     <!-- BARRA DE MENU  -->
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-danger">
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">SG-SST Virtual</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Documentación
-                        </a>
-                        <!-- revisar este bajar -->
-                        <ul class="dropdown-menu bajar" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="#">Información</a></li>
-                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Modificar</a>
-                                <ul class="dropdown-menu">
-                                    <!-- SUB MENU -->
-                                    <li><a class="dropdown-item" href="../../encargado/php/index.php">Encargado</a></li>
-                                    <li><a class="dropdown-item" href="#">Politicas</a></li>
-                                    <li><a class="dropdown-item" href="#">Riesgos psicologicos</a></li>
-                                    <li><a class="dropdown-item" href="#">Plan de emergencia</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown" id="cerrar">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown" id = "cerrar">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle"></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
@@ -66,7 +47,7 @@
 
     <!-- TITULO -->
     <div class="container-fluid">
-        <h1 class="text-center mb-1 mt-2 text-danger">Agregar Usuario</h1>
+        <h1 class="text-center mb-1 mt-2 text-primary">Agregar Usuario</h1>
     </div>
 
     <!-- MODAL -->
@@ -151,7 +132,7 @@
                 
                             <!-- Boton enviar -->
                             <div class="formulario__grupo formulario__grupo-btn-enviar">
-                                <button type="submit" class="formulario__btn btn-danger">Registrarse</button>
+                                <button type="submit" class="formulario__btn btn-primary">Registrarse</button>
                                 <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
                             </div>
                         </form>

@@ -23,37 +23,18 @@
 
 <body>
     <!-- BARRA DE MENU  -->
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-danger">
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">SG-SST Virtual</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Documentación
-                        </a>
-                        <!-- revisar este bajar -->
-                        <ul class="dropdown-menu bajar" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="#">Información</a></li>
-                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Modificar</a>
-                                <ul class="dropdown-menu">
-                                    <!-- SUB MENU -->
-                                    <li><a class="dropdown-item" href="../../encargado/php/index.php">Encargado</a></li>
-                                    <li><a class="dropdown-item" href="#">Politicas</a></li>
-                                    <li><a class="dropdown-item" href="#">Riesgos psicologicos</a></li>
-                                    <li><a class="dropdown-item" href="#">Plan de emergencia</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown" id="cerrar">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown" id = "cerrar">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle"></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
@@ -64,45 +45,51 @@
         </div>
     </nav>
 
+
     <!-- TITULO -->
     <div class="container-fluid">
-        <h1 class="text-center mb-1 mt-3 text-danger titulo">Parámetros</h1>
+        <h1 class="text-center mb-1 mt-3 text-primary titulo">Parámetros</h1>
     </div>
-
-    <!-- MODAL -->
-    <!-- <div class="container-lg c1">
-        <div class="modal m1" tabindex="-1">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
     <main>
         <!-- BOTONES -->
-        <div class="btn-group grupo__botones">
-            <a href="../../menu/pages/index.html" class="btn btn-outline-danger">Inicio</a>
-            <a href="index.html" class="btn btn-outline-danger active">Parámetros</a>
-            <a href="../../empleados/pages/index.html" class="btn btn-outline-danger">Empleados</a>
-            <a href="../../documentacion/pages/index.html" class="btn btn-outline-danger">Documentación</a>
-            <a href="#" class="btn btn-outline-danger">Comites</a>
-            <a href="#" class="btn btn-outline-danger">Provedores</a>
-            <a href="#" class="btn btn-outline-danger">Quejas</a>
-            <a href="#" class="btn btn-outline-danger">Matrices</a>
-            <a href="#" class="btn btn-outline-danger">Difusión</a>
+        <div class="btn-group grupo__botones" role="group" aria-label="Button group with nested dropdown">
+            <a href="../../menu/pages/index.html" class="btn btn-outline-primary">Inicio</a>
+            <a href="../../parametros/pages/index.html" class="btn btn-outline-primary active">Parámetros</a>
+            <a href="../../empleados/pages/index.html" class="btn btn-outline-primary">Empleados</a>
+            <a href="../../documentacion/pages/index.html" class="btn btn-outline-primary">Documentación</a>
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Comites
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <li><a class="dropdown-item" href="../../comites/pages/index.html">COPASST(Actas)</a></li>
+                    <li><a class="dropdown-item" href="../../miembros_comite/pages/index.html">COPASST(Miembros)</a></li>
+                    <li><a class="dropdown-item" href="#">COCOLA</a></li>
+                    <li><a class="dropdown-item" href="#">BE</a></li>
+                </ul>
+            </div>
+            <a href="../../proveedores/pages/index.html" class="btn btn-outline-primary">Provedores</a>
+            <a href="../../quejas/pages/index.html" class="btn btn-outline-primary">Quejas</a>
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Matrices
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <li><a class="dropdown-item" href="#">ACPM</a></li>
+                </ul>
+            </div>
+            <a href="#" class="btn btn-outline-primary">Difusión</a>
         </div>
+
 
 		<!-- FORM -->
         <form action="" class="formulario" id="formulario">
             <!-- Grupo: Nombre -->
-            <div class="formulario__grupo grupo__1" id="grupo__nombre">
+            <div class="formulario__grupo" id="grupo__nombre">
                 <label for="nombre" class="formulario__label">Razón Social</label>
                 <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Sony Group Corporation">
+                    <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Z.E.T Group Corporation">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
                 <p class="formulario__input-error">El nombre solo puede contener letras incluidos acentos.</p>
@@ -122,20 +109,20 @@
             <div class="formulario__grupo" id="grupo__latitud">
                 <label for="latitud" class="formulario__label">Latitud</label>
                 <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" name="latitud" id="latitud" placeholder="Producción">
+                    <input type="text" class="formulario__input" name="latitud" id="latitud" placeholder="0,5975">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">La actividad economica solo puede contener letras incluidos acentos.</p>
+                <p class="formulario__input-error">La latitud solo puede incluir numeros incluidos puntos o comas.</p>
             </div>
             
             <!-- Grupo: Longitud -->
             <div class="formulario__grupo" id="grupo__longitud">
                 <label for="longitud" class="formulario__label">Longitud</label>
                 <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" name="longitud" id="longitud" placeholder="Producción">
+                    <input type="text" class="formulario__input" name="longitud" id="longitud" placeholder="0,15432">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">La actividad economica solo puede contener letras incluidos acentos.</p>
+                <p class="formulario__input-error">La longitud solo puede incluir numeros incluidos puntos o comas.</p>
             </div>
 
             <!-- Grupo: Actividad Economica -->
@@ -247,10 +234,10 @@
             <div class="formulario__grupo" id="grupo__web">
                 <label for="web" class="formulario__label">Pagina Web</label>
                 <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" name="web" id="web" placeholder="Producción">
+                    <input type="text" class="formulario__input" name="web" id="web" placeholder="www.zetgruop.com">
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="formulario__input-error">La actividad economica solo puede contener letras incluidos acentos.</p>
+                <p class="formulario__input-error">La pagina web solo puede contener letras incluidos puntos.</p>
             </div>
 
             <!-- Mensaje error -->
@@ -260,7 +247,7 @@
 
             <!-- Boton enviar -->
             <div class="formulario__grupo formulario__grupo-btn-enviar">
-                <button type="submit" class="formulario__btn btn-danger">Registrarse</button>
+                <button type="submit" class="formulario__btn btn-primary">Registrarse</button>
                 <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
             </div>
         </form>
@@ -268,8 +255,8 @@
 
     <script src="../js/index.js"></script>
 	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 
 </html>

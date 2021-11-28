@@ -4,25 +4,33 @@ const inputs = document.querySelectorAll('#formulario input');
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	nit: /^\d{7,14}$/, // 7 a 14 numeros.
+	latitud: /^[0-9_.+,]{3,14}$/, // 3 a 14 numeros incluidos puntos y comas
+	longitud: /^[0-9_.+,]{3,14}$/, // 3 a 14 numeros incluidos puntos y comas
     direccion: /^[a-zA-ZÀ-ÿ\s0-9\-\#]{1,40}$/, // Letras y espacios, pueden llevar guion y numeral
 	actividad: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	trabajadores: /^\d{1,20}$/, // 10 a 20 numeros.
 	juridica: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
 	telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+	telefono2: /^\d{7,14}$/, // 7 a 14 numeros.
+	telefono3: /^\d{7,14}$/, // 7 a 14 numeros.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-	tipo: /^[a-zA-ZÀ-ÿ\s]{1,40}$/ // Letras y espacios, pueden llevar acentos.
+	tipo: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	web: /^[a-zA-ZÀ-ÿ\s\.]{1,40}$/ // Letras y espacios, pueden llevar acentos.
 }
 
 const campos = {
 	nombre: false,
 	nit: false,
+	latitud: false,
+	longitud: false,
     direccion: false,
 	actividad: false,
 	trabajadores: false,
 	juridica: false,
 	telefono: false,
 	correo: false,
-	tipo: false
+	tipo: false,
+	web: false
 }
 
 const validarFormulario = (e) => {
@@ -32,6 +40,12 @@ const validarFormulario = (e) => {
 		break;
 		case "nit":
 			validarCampo(expresiones.nit, e.target, 'nit');
+		break;
+		case "latitud":
+			validarCampo(expresiones.latitud, e.target, 'latitud');
+		break;
+		case "longitud":
+			validarCampo(expresiones.longitud, e.target, 'longitud');
 		break;
 		case "direccion":
 			validarCampo(expresiones.direccion, e.target, 'direccion');
@@ -51,11 +65,20 @@ const validarFormulario = (e) => {
 		case "telefono":
 			validarCampo(expresiones.telefono, e.target, 'telefono');
 		break;
+		case "telefono2":
+			validarCampo(expresiones.telefono2, e.target, 'telefono2');
+		break;
+		case "telefono3":
+			validarCampo(expresiones.telefono3, e.target, 'telefono3');
+		break;
 		case "correo":
 			validarCampo(expresiones.correo, e.target, 'correo');
 		break;
 		case "tipo":
 			validarCampo(expresiones.tipo, e.target, 'tipo');
+		break;
+		case "web":
+			validarCampo(expresiones.web, e.target, 'web');
 		break;
 	}
 }

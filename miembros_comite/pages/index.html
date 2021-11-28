@@ -20,37 +20,18 @@
 
 <body>
     <!-- BARRA DE MENU  -->
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-danger">
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">SG-SST Virtual</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Documentación
-                        </a>
-                        <!-- revisar este bajar -->
-                        <ul class="dropdown-menu bajar" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="#">Información</a></li>
-                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Modificar</a>
-                                <ul class="dropdown-menu">
-                                    <!-- SUB MENU -->
-                                    <li><a class="dropdown-item" href="../../encargado/php/index.php">Encargado</a></li>
-                                    <li><a class="dropdown-item" href="#">Politicas</a></li>
-                                    <li><a class="dropdown-item" href="#">Riesgos psicologicos</a></li>
-                                    <li><a class="dropdown-item" href="#">Plan de emergencia</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown" id="cerrar">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown" id = "cerrar">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-person-circle"></i>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
@@ -64,21 +45,40 @@
     <body>
             <!-- TITULO -->
             <div class="container-fluid">
-                <h1 class="text-center mb-1 mt-2 text-danger">Miembros Comites</h1>
+                <h1 class="text-center mb-1 mt-2 text-primary">Miembros Comites</h1>
             </div>
 
             <!-- BOTONES -->
-            <div class="btn-group grupo__botones">
-                <a href="../../menu/pages/index.html" class="btn btn-outline-danger">Inicio</a>
-                <a href="../../parametros/pages/index.html" class="btn btn-outline-danger">Parámetros</a>
-                <a href="index.html" class="btn btn-outline-danger">Empleados</a>
-                <a href="#" class="btn btn-outline-danger">Documentación</a>
-                <a href="#" class="btn btn-outline-danger active">Comites</a>
-                <a href="#" class="btn btn-outline-danger">Provedores</a>
-                <a href="#" class="btn btn-outline-danger">Quejas</a>
-                <a href="#" class="btn btn-outline-danger">Matrices</a>
-                <a href="#" class="btn btn-outline-danger">Difusión</a>
+            <div class="btn-group grupo__botones" role="group" aria-label="Button group with nested dropdown">
+                <a href="../../menu/pages/index.html" class="btn btn-outline-primary">Inicio</a>
+                <a href="../../parametros/pages/index.html" class="btn btn-outline-primary">Parámetros</a>
+                <a href="../../empleados/pages/index.html" class="btn btn-outline-primary">Empleados</a>
+                <a href="../../documentacion/pages/index.html" class="btn btn-outline-primary">Documentación</a>
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-outline-primary dropdown-toggle active" data-bs-toggle="dropdown" aria-expanded="false">
+                        Comites
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item" href="../../comites/pages/index.html">COPASST(Actas)</a></li>
+                        <li><a class="dropdown-item" href="../../miembros_comite/pages/index.html">COPASST(Miembros)</a></li>
+                        <li><a class="dropdown-item" href="#">COCOLA</a></li>
+                        <li><a class="dropdown-item" href="#">BE</a></li>
+                    </ul>
+                </div>
+                <a href="../../proveedores/pages/index.html" class="btn btn-outline-primary">Provedores</a>
+                <a href="../../quejas/pages/index.html" class="btn btn-outline-primary">Quejas</a>
+                <div class="btn-group" role="group">
+                    <button id="btnGroupDrop1" type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Matrices
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <li><a class="dropdown-item" href="#">ACPM</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="btn btn-outline-primary">Difusión</a>
             </div>
+
+            <h5>Miembros del Comite COPASST</h5>
     
             <!-- MODAL -->
             <div class="container-lg">
@@ -87,7 +87,7 @@
                         <div class="modal-content">
                             <div class="modal-body">
                                 <!-- BOTON -->
-                                <button type="button" class="btn btn-danger">
+                                <button type="button" class="btn btn-primary">
                                     <i class="bi bi-plus-lg"></i>   
                                 </button>
                                 <!-- TABLA -->
@@ -112,10 +112,10 @@
                                             <td><a href="">--</a></td>
                                             <td><a href="">--</a></td>
                                             <td>
-                                                <button type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-primary">
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </button>
-                                                <button type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-primary">
                                                     <i class="bi bi-trash-fill"></i>
                                                 </button>
                                             </td>
@@ -129,10 +129,10 @@
                                             <td><a href="">Presidente</a></td>
                                             <td><a href="">Sin obs</a></td>
                                             <td>
-                                                <button type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-primary">
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </button>
-                                                <button type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-primary">
                                                     <i class="bi bi-trash-fill"></i>
                                                 </button>
                                             </td>
@@ -146,10 +146,10 @@
                                             <td><a href="">Secretario</a></td>
                                             <td><a href="">Sin obs</a></td>
                                             <td>
-                                                <button type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-primary">
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </button>
-                                                <button type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-primary">
                                                     <i class="bi bi-trash-fill"></i>
                                                 </button>
                                             </td>
@@ -163,10 +163,10 @@
                                             <td><a href="">--</a></td>
                                             <td><a href="">--</a></td>
                                             <td>
-                                                <button type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-primary">
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </button>
-                                                <button type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-primary">
                                                     <i class="bi bi-trash-fill"></i>
                                                 </button>
                                             </td>
@@ -180,10 +180,10 @@
                                             <td><a href="">Miembro</a></td>
                                             <td><a href="">Sin Obs</a></td>
                                             <td>
-                                                <button type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-primary">
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </button>
-                                                <button type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-primary">
                                                     <i class="bi bi-trash-fill"></i>
                                                 </button>
                                             </td>
@@ -197,10 +197,10 @@
                                             <td><a href="">--</a></td>
                                             <td><a href="">--</a></td>
                                             <td>
-                                                <button type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-primary">
                                                     <i class="bi bi-pencil-fill"></i>
                                                 </button>
-                                                <button type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-primary">
                                                     <i class="bi bi-trash-fill"></i>
                                                 </button>
                                             </td>
